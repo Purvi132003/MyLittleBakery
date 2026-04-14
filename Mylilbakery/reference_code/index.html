@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Little Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Modern Typography: Playfair Display for headings, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Include Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">My Little Bakery</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact" class="btn btn-outline">Order Now</a>
+        </div>
+        <button class="menu-toggle"><i data-lucide="menu"></i></button>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Freshly Baked Happiness</h1>
+            <p class="fade-in delay-1">Handcrafted custom, bento, and themed cakes just for you. Made with love from our home oven to your celebration.</p>
+            <div class="hero-actions fade-in delay-2">
+                <a href="#menu" class="btn btn-primary">See Our Cakes</a>
+            </div>
+        </div>
+        <div class="hero-image fade-in delay-3">
+            <img src="assets/hero_cake.png" alt="Delicious Pastel Cake">
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-grid">
+            <div class="about-image">
+                <div class="image-wrapper blur-bg">
+                    <img src="assets/bento_cake.png" alt="Baking with love">
+                </div>
+            </div>
+            <div class="about-text">
+                <span class="subtitle">Our Story</span>
+                <h2>A Home-Run Bakery Driven by Passion</h2>
+                <p>Welcome to <strong>My Little Bakery</strong>, a small batch home-run business dedicated to bringing you the most delicious and beautiful baked goods. Every cake is custom-made, ensuring that your celebrations are perfectly sweet and uniquely yours.</p>
+                <ul class="features">
+                    <li><i data-lucide="heart"></i> Handcrafted with premium ingredients</li>
+                    <li><i data-lucide="stars"></i> Custom themes based on your vision</li>
+                    <li><i data-lucide="gift"></i> Cute, instagram-worthy bento cakes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="section-header text-center">
+            <span class="subtitle">Our Signature Creations</span>
+            <h2>Explore The Menu</h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bento">Bento Cakes</button>
+                <button class="filter-btn" data-filter="custom">Custom & Themed</button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item bento">
+                <div class="item-img">
+                    <img src="assets/bento_cake.png" alt="Bento Cake">
+                </div>
+                <div class="item-info">
+                    <h3>Classic Pastel Bento</h3>
+                    <p>Perfect for 1-2 people. Minimalist and beautifully customized just for you.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item custom">
+                <div class="item-img">
+                    <img src="assets/themed_cake.png" alt="Themed Custom Cake">
+                </div>
+                <div class="item-info">
+                    <h3>Elegant Themed Cake</h3>
+                    <p>Beautiful themes, detailed artistry, and multi-tier celebrations.</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item custom">
+                <div class="item-img">
+                    <img src="assets/hero_cake.png" alt="Customised Cake">
+                </div>
+                <div class="item-info">
+                    <h3>Signature Custom Cake</h3>
+                    <p>Smooth pastel buttercream finishes with aesthetic elegance for any occasion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <span class="subtitle">Place an Order</span>
+                <h2>Let's Make Something Sweet!</h2>
+                <p>Ready to treat yourself or someone special? Fill out the form, or reach out to us directly on WhatsApp.</p>
+                
+                <div class="contact-methods">
+                    <a href="https://wa.me/something" class="social-link" target="_blank">
+                        <i data-lucide="message-circle"></i> Chat on WhatsApp
+                    </a>
+                    <a href="#" class="social-link">
+                        <i data-lucide="instagram"></i> DM on Instagram
+                    </a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Ex. Purvi">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Cake Type</label>
+                        <select id="type">
+                            <option value="bento">Bento Cake</option>
+                            <option value="custom">Customized/Themed Cake</option>
+                            <option value="other">Other Baked Goods</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Design Details & Occasion</label>
+                        <textarea id="details" rows="5" required placeholder="Tell me about the style, colors (e.g., pastel pink/blue), and date you need it by..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Order Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 My Little Bakery. Made with love.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>
